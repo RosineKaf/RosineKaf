@@ -11,7 +11,7 @@ Les scripts sont organisés par étape logique afin de refléter une démarche p
 
 ## 📄 Contenu du dossier
 
-### 1️01_cleaning_transformation.sql
+### 01_cleaning_transformation.sql
 Ce script correspond à la **phase de préparation et transformation des données**.
 
 Il permet de :
@@ -27,7 +27,7 @@ Il permet de :
 
 ---
 
-### 2️02_analysis_kpis.sql
+### 02_analysis_kpis.sql
 Ce script correspond à la **phase d’analyse métier et de calcul des indicateurs clés (KPIs)**.
 
 Il permet d’analyser :
