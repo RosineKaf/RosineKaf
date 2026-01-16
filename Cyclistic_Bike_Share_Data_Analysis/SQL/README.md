@@ -1,7 +1,7 @@
-/*
+
 Project: Cyclistic Bike-Share Analysis
 Description: Analyse des habitudes d’utilisation des vélos Cyclistic à Chicago.
-*/
+
 # 📁 Dossier SQL – Cyclistic Bike-Share Analysis
 
 Ce dossier contient l’ensemble des scripts SQL utilisés pour le projet **Cyclistic Bike-Share Analysis**.  
