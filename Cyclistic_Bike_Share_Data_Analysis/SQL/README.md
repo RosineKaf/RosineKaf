@@ -1,5 +1,5 @@
 
-Project: Cyclistic Bike-Share Analysis
+Projet: Cyclistic Bike-Share Analysis
 Description: Analyse des habitudes d’utilisation des vélos Cyclistic à Chicago.
 
 # 📁 Dossier SQL – Cyclistic Bike-Share Analysis
