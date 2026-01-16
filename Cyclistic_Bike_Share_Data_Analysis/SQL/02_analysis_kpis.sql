@@ -1,51 +1,66 @@
 /*
 Project: Cyclistic Bike-Share Analysis
+Author: Rosine Armelle Tinbo KAFANDO
 GitHub: https://github.com/RosineKaf
-Description: Nettoyage et transformation des données Cyclistic
+Description: Analyses métier et KPIs
 Tools: SQL (BigQuery)
 */
 
 -- =========================================================
--- SECTION 1 : Calcul de la distance des trajets (en km)
--- Utilisation des coordonnées GPS
+-- KPI 1 : Stations les plus utilisées par type d’utilisateur
 -- =========================================================
-CREATE OR REPLACE TABLE `cyclisticproject-451118.cyclic_data.all_trips_cleaned` AS
 SELECT
-    *,
-    ST_DISTANCE(
-        ST_GEOGPOINT(start_lng, start_lat),
-        ST_GEOGPOINT(end_lng, end_lat)
-    ) / 1000 AS trip_distance_km
-FROM `cyclisticproject-451118.cyclic_data.all_trips_cleaned`;
+    member_casual,
+    start_station_name,
+    COUNT(ride_id) AS total_trips
+FROM `cyclisticproject-451118.cyclic_data.all_trips_cleaned`
+WHERE start_station_name IS NOT NULL
+GROUP BY member_casual, start_station_name
+ORDER BY total_trips DESC
+LIMIT 10;
 
 
 -- =========================================================
--- SECTION 2 : Calcul de la durée des trajets (en minutes)
+-- KPI 2 : Durée moyenne des trajets (en minutes)
 -- =========================================================
-CREATE OR REPLACE TABLE `cyclisticproject-451118.cyclic_data.all_trips_cleaned` AS
 SELECT
-    *,
-    TIMESTAMP_DIFF(ended_at, started_at, SECOND) / 60 AS ride_length_min
-FROM `cyclisticproject-451118.cyclic_data.all_trips_cleaned`;
+    member_casual,
+    ROUND(AVG(ride_length_min), 2) AS avg_duration_min
+FROM `cyclisticproject-451118.cyclic_data.all_trips_cleaned`
+WHERE ride_length_min > 0
+GROUP BY member_casual;
 
 
 -- =========================================================
--- SECTION 3 : Ajout du jour de la semaine
--- 1 = Dimanche | 7 = Samedi
+-- KPI 3 : Heures de pointe des trajets
 -- =========================================================
-CREATE OR REPLACE TABLE `cyclisticproject-451118.cyclic_data.all_trips_cleaned` AS
 SELECT
-    *,
-    EXTRACT(DAYOFWEEK FROM started_at) AS day_of_week
-FROM `cyclisticproject-451118.cyclic_data.all_trips_cleaned`;
+    member_casual,
+    start_hour,
+    COUNT(ride_id) AS total_trips
+FROM `cyclisticproject-451118.cyclic_data.all_trips_cleaned`
+GROUP BY member_casual, start_hour
+ORDER BY member_casual, start_hour;
 
 
 -- =========================================================
--- SECTION 4 : Ajout de l’heure de départ
+-- KPI 4 : Distance moyenne des trajets (en km)
 -- =========================================================
-CREATE OR REPLACE TABLE `cyclisticproject-451118.cyclic_data.all_trips_cleaned` AS
 SELECT
-    *,
-    EXTRACT(HOUR FROM started_at) AS start_hour
-FROM `cyclisticproject-451118.cyclic_data.all_trips_cleaned`;
+    member_casual,
+    ROUND(AVG(trip_distance_km), 2) AS avg_distance_km
+FROM `cyclisticproject-451118.cyclic_data.all_trips_cleaned`
+WHERE trip_distance_km > 0
+GROUP BY member_casual;
 
+
+-- =========================================================
+-- KPI 5 : Nombre de trajets par jour de la semaine
+-- =========================================================
+SELECT
+    member_casual,
+    day_of_week,
+    COUNT(ride_id) AS total_trips
+FROM `cyclisticproject-451118.cyclic_data.all_trips_cleaned`
+GROUP BY member_casual, day_of_week
+ORDER BY member_casual, day_of_week;
