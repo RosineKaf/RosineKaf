@@ -1,7 +1,5 @@
 /*
 Project: Cyclistic Bike-Share Analysis
-Author: Rosine Armelle Tinbo KAFANDO
-GitHub: https://github.com/RosineKaf
 Description: Analyses métier et KPIs
 Tools: SQL (BigQuery)
 */
