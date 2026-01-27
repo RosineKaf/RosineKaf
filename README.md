@@ -1,7 +1,7 @@
 # Portfolio Business Analyst – Rosine Armelle Tinbo KAFANDO
 
 Bienvenue sur mon Business Analyst Portfolio, présentant des études de cas complètes, des livrables de requirements, des modèles de processus et des analyses.
-Ce portfolio montre ma capacité à traduire des problématiques métiers en **exigences claires**, à optimiser des processus et à produire des résultats mesurables en utilisant des outils standards de l’industrie BA tels qu’**Excel, SQL, Power BI, Tableau et Salesforce**.
+Ce portfolio montre ma capacité à traduire des problématiques métiers en **exigences claires**, à optimiser des processus et à produire des résultats mesurables en utilisant des outils standards de l’industrie BA tels qu’**Excel, SQL, Power BI, Tableau **.
 
 ---
 
@@ -10,7 +10,7 @@ Ce portfolio montre ma capacité à traduire des problématiques métiers en **e
 Je suis une **Business Analyst / AMOA junior** avec une expérience pratique dans :
 
 - Recueil et documentation des exigences métiers
-- Modélisation de processus (AS-IS / TO-BE)
+- Modélisation de processus 
 - Analyse de données avec SQL et Excel
 - Collaboration avec les parties prenantes
 - Support à la livraison Agile (Scrum)
@@ -24,17 +24,14 @@ Mon travail se concentre sur **l’amélioration de l’efficacité**, **la réd
 ### Analyse métier
 - Rédaction de Business Requirements Documents (BRD)
 - Exigences fonctionnelles et non fonctionnelles (FRD / NFR)
-- Matrice de traçabilité des exigences (RTM)
-- Analyse des parties prenantes & RACI
+- Analyse des parties prenantes 
 - User Stories & critères d’acceptation
 - Planification et support UAT
 
 ### Processus et données
-- Modélisation BPMN (AS-IS / TO-BE)
 - SQL (analyse des données et suivi KPI)
 - Tableaux de bord Excel & analyse pivot
-- Analyse des causes racines (Root Cause Analysis)
-- Mesure des KPIs et SLA
+- Mesure des KPIs
 
 ### Méthodologies
 - Agile / Scrum
