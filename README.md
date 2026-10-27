@@ -18,6 +18,7 @@ SQL · Power BI · Power Query · Excel · Tableau · R · UML · Confluence · 
 | Projet | Sujet | Outils |
 |---|---|---|
 | [Gestion commerciale – Power BI](https://github.com/RosineKaf/Business-Analyst/tree/main/Gestion_Commerciale_PowerBI) | Tableau de bord de pilotage des ventes : KPI, clients, produits | Power BI, Power Query |
+| [Assurance – Power BI](https://github.com/RosineKaf/Business-Analyst/tree/main/Assurance_PowerBI) | Primes, contrats et rendement d'un assureur vie | Power BI, Power Query |
 | [Cyclistic – Vélos en libre-service](https://github.com/RosineKaf/Business-Analyst/tree/main/Cyclistic_Bike_Share_Data_Analysis) | Comprendre l'usage des abonnés vs occasionnels pour augmenter les abonnements | SQL (BigQuery), Tableau |
 | [Bellabeat – Objets connectés](https://github.com/RosineKaf/Business-Analyst/tree/main/Bellabeat_Wearable_Data_Insights) | Analyser l'activité et le sommeil des utilisateurs pour orienter le marketing | R, ggplot2 |
 | [Gestion des accès ESIGELEC](https://github.com/RosineKaf/Business-Analyst/tree/main/gestion-acces-esigelec) | Spécifier, concevoir et valider une application de contrôle d'accès | UML, SQL (MySQL) |
